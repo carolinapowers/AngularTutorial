@@ -9,7 +9,7 @@ app.factory('Auth', function ($firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
             return auth.$createUser(user.email, user.password);
         },
         login: function (user) {
-            return auth.$login('password, user');
+            return auth.$login('password', user);
         },
         logout: function () {
             auth.$logout();
@@ -33,5 +33,4 @@ app.factory('Auth', function ($firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
     });
 
     return Auth;
-
 });
