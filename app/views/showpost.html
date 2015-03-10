@@ -1,8 +1,5 @@
-<div>
-    <a ng-href="{{ post.url }}">{{ post.title }}</a>
-</div>
-
 <a ng-href="#/posts">Back to Posts</a>
+
 
 
 <div class="container posts-page">
@@ -37,6 +34,9 @@
                 <a ng-href="#/users/{{ comment.creatorUID }}">
           {{ comment.creator }}
         </a>
+                <a ng-href="" ng-click="deleteComment(comment)" ng-show="signedIn() && comment.creatorUID === user.uid">
+        (delete)
+      </a>
             </p>
         </div>
     </div>
